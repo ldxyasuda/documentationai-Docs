@@ -1,0 +1,79 @@
+---
+title: Introduction to L-DX
+description: Discover L-DX, the cloud-based core system for apparel digital transformation, and learn how it streamlines inventory, production, and order management to boost profitability.
+---
+
+## Overview
+
+L-DX empowers your apparel business with a cloud-based core system designed for digital transformation (DX). You face common challenges like stock stagnation, stockouts, and disjointed order-to-delivery processes. L-DX solves these by integrating inventory management, production tracking, and real-time order linkage. Connect it seamlessly to your ERP or existing systems for quick implementation and on-site adoption. Maximize profits through optimized stock levels and efficient operations.
+
+## Key Features
+
+L-DX delivers powerful capabilities tailored for apparel businesses. Explore the core features below.
+
+<Columns cols={3}>
+  <Card title="Real-Time Inventory Linkage" icon="database" href="#inventory">
+    Track inventory across orders, production, and delivery in real time. Prevent stockouts and overstock with instant updates.
+  </Card>
+  <Card title="Order and Production Integration" icon="link" href="#orders">
+    Link orders, costs, and outstanding items automatically. Streamline workflows from receipt to fulfillment.
+  </Card>
+  <Card title="ERP and System Connectivity" icon="plug" href="#connectivity">
+    Flexibly integrate with ERP, POS, and legacy systems. Achieve short-term rollout without major disruptions.
+  </Card>
+</Columns>
+
+## Benefits
+
+You reduce stock stagnation by maintaining optimal inventory levels, minimizing waste and tying up capital. Eliminate stockouts to ensure orders ship on time, boosting customer satisfaction. L-DX's real-time insights help you maximize profits through data-driven decisions on production and purchasing.
+
+<Callout kind="success">
+  Businesses using L-DX report up to 30% reduction in excess inventory and 25% faster order fulfillment.
+</Callout>
+
+## Quick Start
+
+Get up and running with L-DX in minutes. Follow these steps to access your dashboard and configure basics.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Create your account at `https://dashboard.example.com/signup`. Use your business email for verification.
+  </Step>
+  <Step title="Connect Systems" icon="plug">
+    In the dashboard, navigate to Integrations. Add your ERP endpoint like `https://api.example.com/erp/sync`.
+  </Step>
+  <Step title="Import Data" icon="upload">
+    Upload initial inventory via CSV or API. Sample endpoint: `POST https://api.example.com/v1/inventory/import`.
+  </Step>
+  <Step title="Monitor Live" icon="activity">
+    View real-time dashboards for orders and stock. Set alerts for low inventory thresholds.
+  </Step>
+</Steps>
+
+## Next Steps
+
+Dive deeper into L-DX with these resources.
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="book-open" href="/quickstart">
+    Complete setup and first integration.
+  </Card>
+  <Card title="API Reference" icon="code" href="/authentication">
+    Authenticate and use core endpoints.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced Connectivity Options" default-open="false">
+
+L-DX supports webhooks for custom events. Configure at `https://dashboard.example.com/webhooks`.
+
+```javascript
+// Example webhook payload
+{
+  "event": "order_received",
+  "order_id": "ORD-12345",
+  "items": [{"sku": "APP-001", "quantity": 50}]
+}
+```
+
+</Expandable>

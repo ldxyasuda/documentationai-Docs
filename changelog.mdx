@@ -1,0 +1,103 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to L-DX, including new features and bug fixes for better apparel management.
+---
+
+## Recent Updates
+
+<Callout kind="info">
+  Check this changelog regularly to stay informed about new features, improvements, and fixes that enhance your apparel inventory and production management.
+</Callout>
+
+<Update label="2024-10-15" description="v2.1.0" tags={["feature", "improvement"]}>
+  ## New Features
+
+  - Added real-time cost tracking for production orders, linking directly to inventory levels to prevent stockouts.
+  - Introduced ERP connector for seamless integration with popular systems like SAP and Oracle.
+
+  ## Improvements
+
+  - Enhanced order receipt and delivery linkage, reducing processing time by `>30%`.
+  - Optimized dashboard performance for handling `>10,000` outstanding orders.
+
+  ## Bug Fixes
+
+  - Fixed synchronization issues between inventory and production modules during peak order volumes.
+  - Resolved cost calculation errors when updating outstanding orders.
+
+  <CodeGroup tabs="JavaScript,Python">
+  ````javascript
+  // New ERP integration config
+  const ldxConfig = {
+    erp: {
+      endpoint: 'https://api.example.com/erp/sync',
+      apiKey: 'YOUR_API_KEY'
+    }
+  };
+  ````
+  ````python
+  # New ERP integration config
+  ldx_config = {
+      'erp': {
+          'endpoint': 'https://api.example.com/erp/sync',
+          'api_key': 'YOUR_API_KEY'
+      }
+  }
+  ````
+  </CodeGroup>
+</Update>
+
+<Update label="2024-09-20" description="v2.0.0" tags={["feature", "bugfix"]}>
+  ## New Features
+
+  - Launched production module with real-time inventory adjustments for apparel manufacturing workflows.
+  - Added alert system for stock stagnation, notifying you via email or dashboard.
+
+  ## Bug Fixes
+
+  - Corrected order linkage errors that caused duplicate inventory deductions.
+  - Fixed delivery status updates not reflecting in outstanding orders dashboard.
+
+  ## Deprecations
+
+  - Legacy inventory API endpoints (`/v1/inventory`) deprecated; migrate to `/v2/inventory/sync`.
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+  ## New Features
+
+  - Core inventory management with real-time order receipt and delivery tracking.
+  - Initial production management module for apparel DX, maximizing profits by minimizing stock issues.
+
+  ## Breaking Changes
+
+  - Updated authentication to use `{API_KEY}` header instead of query params.
+
+  <Steps>
+    <Step title="Migrate Auth" icon="shield">
+      Update your API calls to include the `Authorization: Bearer YOUR_API_KEY` header.
+    </Step>
+    <Step title="Test Integration" icon="check-circle">
+      Verify inventory sync with `https://api.example.com/v2/inventory`.
+    </Step>
+  </Steps>
+</Update>
+
+## Upcoming Features
+
+<Columns cols={2}>
+  <Card title="Advanced Analytics" icon="bar-chart-3" href="/concepts/analytics">
+    Gain insights into stock patterns and profit optimization with AI-driven forecasts.
+  </Card>
+  <Card title="Mobile App" icon="smartphone" href="/quickstart/mobile">
+    Manage orders and inventory from your phone for on-site adoption.
+  </Card>
+</Columns>
+
+<Expandable title="Migration Tips for v2.1.0" default-open="false">
+  Review your ERP connections and test order linkages in staging. Use the new config format shown above to avoid disruptions.
+</Expandable>
+
+<Callout kind="tip">
+  For custom integrations or issues, contact support at `support@ldx.com` or check the [dashboard](https://dashboard.example.com).
+</Callout>

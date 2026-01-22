@@ -1,0 +1,32 @@
+---
+title: Inventory Sync Error
+description: Fix inventory sync issues in L-DX.
+---
+
+## Symptoms
+- Inventory not updating in real time
+- Error: "Inventory sync failed"
+
+## Causes
+- Disconnected ERP/integration
+- Invalid API credentials
+
+## Solution
+<Steps>
+  <Step title="Check integration status">
+    ````
+    Go to Settings → Integrations
+    Ensure status is "Connected"
+    ````
+  </Step>
+  <Step title="Re-enter API credentials">
+    ````
+    Click "Edit" under your ERP integration and update keys if needed.
+    ````
+  </Step>
+  <Step title="Retry sync">
+    ````
+    Press "Sync Now" or wait for auto-sync to retry.
+    ````
+  </Step>
+</Steps>
